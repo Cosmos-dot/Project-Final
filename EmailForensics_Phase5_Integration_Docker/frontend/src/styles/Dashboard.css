@@ -1,0 +1,870 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111827;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   MAIN DASHBOARD
+========================================= */
+
+.dashboard {
+  min-height: 100vh;
+  width: 100%;
+
+  background: #111827;
+  color: #ffffff;
+
+  padding-bottom: 60px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  width: 100%;
+
+  padding: 20px 35px;
+
+  background: #172033;
+
+  border-bottom: 1px solid #293750;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.navbar h2 {
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #ffffff;
+
+  font-size: 22px;
+}
+
+.navbar svg {
+  color: #3b82f6;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  text-align: center;
+
+  padding: 45px 20px 30px;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 0 auto;
+
+  max-width: 750px;
+
+  color: #aeb9cc;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   INPUT PANEL
+========================================= */
+
+.inputPanel {
+  width: 92%;
+  max-width: 950px;
+
+  margin: 20px auto 40px;
+
+  padding: 35px;
+
+  background: #1b263b;
+
+  border: 1px solid #2f3e59;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.inputPanel h2 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 26px;
+}
+
+.inputDescription {
+  margin: 0 0 22px;
+
+  color: #aeb9cc;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   EMAIL HEADER TEXTAREA
+========================================= */
+
+.headerBox {
+  width: 100%;
+
+  min-height: 230px;
+
+  box-sizing: border-box;
+
+  padding: 16px;
+
+  resize: vertical;
+
+  background: #172033;
+
+  color: #ffffff;
+
+  border: 1px solid #465674;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  font-family: Consolas, "Courier New", monospace;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  transition: 0.2s;
+}
+
+.headerBox::placeholder {
+  color: #8290a7;
+}
+
+.headerBox:focus {
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+
+/* =========================================
+   OR DIVIDER
+========================================= */
+
+.orDivider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin: 25px 0;
+
+  color: #aeb9cc;
+}
+
+.orDivider::before,
+.orDivider::after {
+  content: "";
+
+  height: 1px;
+
+  flex: 1;
+
+  background: #53627a;
+}
+
+.orDivider span {
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   FILE UPLOAD
+========================================= */
+
+.uploadSection {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.attachBtn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 13px 25px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  border-radius: 9px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.attachBtn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+.attachBtn svg {
+  font-size: 17px;
+}
+
+.fileName {
+  max-width: 90%;
+
+  padding: 8px 15px;
+
+  background: #172033;
+
+  border: 1px solid #33445f;
+
+  border-radius: 7px;
+
+  color: #93c5fd;
+
+  font-size: 14px;
+
+  word-break: break-word;
+}
+
+
+/* =========================================
+   BUTTON AREA
+========================================= */
+
+.buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 25px;
+}
+
+
+/* =========================================
+   ANALYZE BUTTON
+========================================= */
+
+.analyzeBtn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 12px 22px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.analyzeBtn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   CLEAR BUTTON
+========================================= */
+
+.clearBtn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 12px 22px;
+
+  border: 1px solid #465674;
+
+  border-radius: 8px;
+
+  background: #26344d;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.clearBtn:hover {
+  background: #334155;
+
+  border-color: #64748b;
+}
+
+
+/* =========================================
+   ENTER HINT
+========================================= */
+
+.enterHint {
+  margin: 13px 0 0;
+
+  color: #73819a;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   REPORT AREA
+========================================= */
+
+.reportArea {
+  width: 92%;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+.resultTitle {
+  margin: 0 0 20px;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  font-size: 25px;
+}
+
+
+/* =========================================
+   RESULT CARDS
+========================================= */
+
+.results {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 15px;
+}
+
+.card {
+  min-height: 145px;
+
+  padding: 22px;
+
+  background: #1b263b;
+
+  border: 1px solid #2f3e59;
+
+  border-radius: 14px;
+
+  text-align: center;
+
+  box-shadow:
+    0 7px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card h3 {
+  margin: 0 0 15px;
+
+  color: #93c5fd;
+
+  font-size: 17px;
+}
+
+.card p {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+
+/* =========================================
+   RISK SCORE
+========================================= */
+
+.riskScoreText {
+  margin-bottom: 15px !important;
+
+  color: #60a5fa !important;
+
+  font-size: 24px !important;
+}
+
+.progress {
+  width: 100%;
+
+  height: 8px;
+
+  overflow: hidden;
+
+  background: #303e55;
+
+  border-radius: 10px;
+}
+
+.progressFill {
+  height: 100%;
+
+  background: #3b82f6;
+
+  border-radius: 10px;
+
+  transition: width 0.5s ease;
+}
+
+
+/* =========================================
+   RISK LEVEL
+========================================= */
+
+.riskCard {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.riskLevel {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 100px;
+
+  padding: 9px 18px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* HIGH */
+
+.risk-high {
+  background: rgba(239, 68, 68, 0.15);
+
+  border: 1px solid rgba(239, 68, 68, 0.5);
+
+  color: #f87171;
+}
+
+
+/* MEDIUM */
+
+.risk-medium {
+  background: rgba(234, 179, 8, 0.15);
+
+  border: 1px solid rgba(234, 179, 8, 0.5);
+
+  color: #facc15;
+}
+
+
+/* LOW */
+
+.risk-low {
+  background: rgba(34, 197, 94, 0.15);
+
+  border: 1px solid rgba(34, 197, 94, 0.5);
+
+  color: #4ade80;
+}
+
+
+/* =========================================
+   REPORT EXPLANATION
+========================================= */
+
+.reportExplanation {
+  margin-top: 30px;
+
+  padding: 30px;
+
+  background: #1b263b;
+
+  border: 1px solid #2f3e59;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.reportExplanation h2 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: 23px;
+}
+
+
+/* =========================================
+   EXPLANATION ROW
+========================================= */
+
+.explanationItem {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid #2f3e59;
+
+  line-height: 1.6;
+}
+
+.explanationItem strong {
+  min-width: 65px;
+
+  color: #60a5fa;
+}
+
+.explanationItem span {
+  color: #cbd5e1;
+}
+
+
+/* =========================================
+   OVERALL SUMMARY
+========================================= */
+
+.overallSummary {
+  margin-top: 22px;
+
+  padding: 20px;
+
+  background: #172033;
+
+  border: 1px solid #2f3e59;
+
+  border-radius: 10px;
+}
+
+.overallSummary h3 {
+  margin: 0 0 10px;
+
+  color: #93c5fd;
+
+  font-size: 18px;
+}
+
+.overallSummary p {
+  margin: 0;
+
+  color: #cbd5e1;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   PRINT / SAVE BUTTON
+========================================= */
+
+.reportBtn {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin: 25px auto 0;
+
+  padding: 12px 22px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.reportBtn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .results {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .navbar {
+    padding: 18px;
+  }
+
+  .navbar h2 {
+    font-size: 18px;
+  }
+
+  .hero {
+    padding: 30px 15px 20px;
+  }
+
+  .hero h1 {
+    font-size: 23px;
+  }
+
+  .inputPanel {
+    width: 94%;
+
+    padding: 22px;
+  }
+
+  .headerBox {
+    min-height: 200px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .analyzeBtn,
+  .clearBtn {
+    width: 100%;
+  }
+
+  .results {
+    grid-template-columns: 1fr;
+  }
+
+  .reportExplanation {
+    padding: 22px;
+  }
+
+  .explanationItem {
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+}
+
+
+/* =========================================
+   PRINT VERSION
+========================================= */
+
+@media print {
+
+  body {
+    background: #ffffff !important;
+
+    color: #000000 !important;
+  }
+
+  .dashboard {
+    background: #ffffff !important;
+
+    color: #000000 !important;
+  }
+
+  .navbar,
+  .hero,
+  .inputPanel,
+  .reportBtn {
+    display: none !important;
+  }
+
+  .reportArea {
+    width: 100%;
+
+    max-width: none;
+
+    margin: 0;
+  }
+
+  .resultTitle {
+    color: #000000 !important;
+  }
+
+  .results {
+    grid-template-columns:
+      repeat(5, 1fr);
+  }
+
+  .card {
+    background: #ffffff !important;
+
+    color: #000000 !important;
+
+    border: 1px solid #cccccc;
+
+    box-shadow: none;
+  }
+
+  .card h3 {
+    color: #000000 !important;
+  }
+
+  .card p {
+    color: #000000 !important;
+  }
+
+  .reportExplanation {
+    background: #ffffff !important;
+
+    color: #000000 !important;
+
+    border: 1px solid #cccccc;
+
+    box-shadow: none;
+  }
+
+  .reportExplanation h2 {
+    color: #000000 !important;
+  }
+
+  .explanationItem {
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .explanationItem strong,
+  .explanationItem span {
+    color: #000000 !important;
+  }
+
+  .overallSummary {
+    background: #ffffff !important;
+
+    border: 1px solid #cccccc;
+  }
+
+  .overallSummary h3,
+  .overallSummary p {
+    color: #000000 !important;
+  }
+
+}
